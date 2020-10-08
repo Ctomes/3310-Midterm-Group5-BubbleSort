@@ -10,7 +10,8 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-
+//poi dependencies have been commented out for submission. They were used to print the recorded time for each iteration of sorts to eventually calculate avg time
+//at array size n. however this time will just be represented in group submission. 
 public class MyBubbleSort {
 
 	public static void main(String[] args) {
