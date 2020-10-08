@@ -22,22 +22,22 @@ public class MyBubbleSort {
 		
 
 				//Create a workbook to export to spreadsheet: will not do for submission
-				XSSFWorkbook workbook = new XSSFWorkbook();
+			//	XSSFWorkbook workbook = new XSSFWorkbook();
 				
 				//Create a spreadsheet
-				XSSFSheet sheet = workbook.createSheet("Results");
+			//	XSSFSheet sheet = workbook.createSheet("Results");
 				
 				//Create a Row Object
-				XSSFRow row;
+			//	XSSFRow row;
 		
 
 		for(int i = 0; i < setOfArrays.length; i++)
 		{
 			System.out.println("Creating array of size: " + setOfArrays[i] + ".");
 			//Workbook Excel Export:
-			row = sheet.createRow(i);
-			Cell cell0 = row.createCell(0);
-			cell0.setCellValue(setOfArrays[i]);
+			//row = sheet.createRow(i);
+			//Cell cell0 = row.createCell(0);
+			//cell0.setCellValue(setOfArrays[i]);
 			
 			int array[] = new int[setOfArrays[i]];
 			randomfy(array);//fill array with random vals
@@ -54,8 +54,8 @@ public class MyBubbleSort {
 					duration = end - start;
 					
 	
-					Cell cell = row.createCell(j+1);
-					cell.setCellValue(duration);
+					//Cell cell = row.createCell(j+1);
+					//cell.setCellValue(duration);
 
 			   
 			   System.out.println("Array number " + (j+1) +" of length: " + array.length + " had a duration of " + duration + " nanoseconds.");
@@ -63,18 +63,18 @@ public class MyBubbleSort {
 			}
 		}
 	//writing to excel file
-		
-		try {
-			FileOutputStream out = new FileOutputStream(new File("Results.xlsx"));
-			workbook.write(out);
-			out.close();
-			System.out.println("Excel file is created successfully");
-		}catch(FileNotFoundException ex) {
-			
-		} catch (IOException e) {
-
-			e.printStackTrace();
-		}
+	//	
+	//	try {
+	//		FileOutputStream out = new FileOutputStream(new File("Results.xlsx"));
+	//		workbook.write(out);
+	//		out.close();
+	//		System.out.println("Excel file is created successfully");
+	//	}catch(FileNotFoundException ex) {
+	//		
+	//	} catch (IOException e) {
+//
+	//		e.printStackTrace();
+	//	}
 	}
 	
 	//Function to sort an array of any size, input is an array of integers and sorts in-place
